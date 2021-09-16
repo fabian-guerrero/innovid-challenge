@@ -7,5 +7,9 @@
   },
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "classnames": "^2.3.1"
   }
 }

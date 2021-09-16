@@ -1,0 +1,60 @@
+$colorRed: #dc3545;
+$colorGreen: #198754;
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+.loaderWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: 1280px) {
+    flex-wrap: nowrap;
+  }
+  .serverImage{
+    width: 50%;
+  }
+  .server{
+    width: 100%;
+    margin: 25px 0;
+    @media (min-width: 480px) {
+      width: 45%;
+    }
+    @media (min-width: 1280px) {
+      width: 20%;
+    }
+  }
+  .statusBar{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    font-weight: bold;
+    color: $colorWhite;
+    .statusOff, .statusOn, .button, .loadIndicator{
+      padding: 5px 0;
+    }
+    .loadIndicator{
+      color: $colorBlack;
+      &.overload{
+        color: $colorWhite;
+        background-color: $colorRed;
+      }
+      &.normalLoad{
+        color: $colorWhite;
+        background-color: #198754;
+      }
+    }
+    .statusOff{
+      color: $colorRed;
+    }
+    .statusOn{
+      color: #198754;
+    }
+    .button{
+      cursor: pointer;
+      color: $colorBlack;
+    }
+  }
+
+}
